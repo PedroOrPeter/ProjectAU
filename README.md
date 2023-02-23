@@ -1,1 +1,3 @@
 # ProjectAU
+
+pip install SpeechRecognition
