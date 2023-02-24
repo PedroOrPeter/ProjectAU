@@ -29,8 +29,8 @@ class AppVoiceRecognition:
         self.frame_first.place(relx=0.35, rely=0.06, relheight=0.8, relwidth=0.3)
 
     def button(self):
-        self.button_enter_first = Button(self.frame_first, bg='green', text='Enter', font=('Arial', 15))
-        self.button_enter_first.place(relx=0.62, rely=0.83, relheight=0.1, relwidth=0.3)
+        self.button_enter_first = Button(self.frame_first, bg='green', text='Entrar', font=('Arial', 15))
+        self.button_enter_first.place(relx=0.6, rely=0.83, relheight=0.06, relwidth=0.3)
 
     def labels(self):
         self.lb_nome = Label(self.frame_first, text="Nome:", font=('Arial', 11), bg="#DDDDDD")
