@@ -33,19 +33,19 @@ class AppVoiceRecognition:
         self.button_enter_first.place(relx=0.62, rely=0.83, relheight=0.1, relwidth=0.3)
 
     def labels(self):
-        self.lb_nome = Label(self.frame_first, text="Nome:")
+        self.lb_nome = Label(self.frame_first, text="Nome:", font=('Arial', 11), bg="#DDDDDD")
         self.lb_nome.place(relx=0.05, rely=0.05)
 
-        self.lb_sobrenome = Label(self.frame_first, text="Sobrenome:")
+        self.lb_sobrenome = Label(self.frame_first, text="Sobrenome:", font=('Arial', 11), bg="#DDDDDD")
         self.lb_sobrenome.place(relx=0.6, rely=0.05)
 
-        self.lb_idade = Label(self.frame_first, text="Idade:")
+        self.lb_idade = Label(self.frame_first, text="Idade:", font=('Arial', 11), bg="#DDDDDD")
         self.lb_idade.place(relx=0.05, rely=0.2)
 
-        self.lb_email = Label(self.frame_first, text="Email:")
+        self.lb_email = Label(self.frame_first, text="Email:", font=('Arial', 11), bg="#DDDDDD")
         self.lb_email.place(relx=0.6, rely=0.2)
 
-        self.lb_motivo = Label(self.frame_first, text="Motivo pelo uso do robô:")
+        self.lb_motivo = Label(self.frame_first, text="Motivo pelo uso do robô:", font=('Arial', 11), bg="#DDDDDD")
         self.lb_motivo.place(relx=0.05, rely=0.4)
 
     def entrys(self):
