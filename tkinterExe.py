@@ -10,8 +10,8 @@ class AppVoiceRecognition:
         self.screen()
         self.frames_screen()
         self.button()
-       #self.labels_entrys_first()
-       # self.labels_entrys_second()
+        self.labels()
+        self.entrys()
         root.mainloop()
 
     def screen(self):
@@ -31,5 +31,38 @@ class AppVoiceRecognition:
     def button(self):
         self.button_enter_first = Button(self.frame_first, bg='green', text='Enter', font=('Arial', 15))
         self.button_enter_first.place(relx=0.62, rely=0.83, relheight=0.1, relwidth=0.3)
+
+    def labels(self):
+        self.lb_nome = Label(self.frame_first, text="Nome:")
+        self.lb_nome.place(relx=0.05, rely=0.05)
+
+        self.lb_sobrenome = Label(self.frame_first, text="Sobrenome:")
+        self.lb_sobrenome.place(relx=0.6, rely=0.05)
+
+        self.lb_idade = Label(self.frame_first, text="Idade:")
+        self.lb_idade.place(relx=0.05, rely=0.2)
+
+        self.lb_email = Label(self.frame_first, text="Email:")
+        self.lb_email.place(relx=0.6, rely=0.2)
+
+        self.lb_motivo = Label(self.frame_first, text="Motivo pelo uso do robô:")
+        self.lb_motivo.place(relx=0.05, rely=0.4)
+
+    def entrys(self):
+        self.nome_entry = Entry(self.frame_first)
+        self.nome_entry.place(relx=0.05, rely=0.1, relwidth=0.37)
+
+        self.idade_entry = Entry(self.frame_first)
+        self.idade_entry.place(relx=0.05, rely=0.25, relwidth=0.241)
+
+        self.sobrenome_entry = Entry(self.frame_first)
+        self.sobrenome_entry.place(relx=0.6, rely=0.1, relwidth=0.37)
+
+        self.email_entry = Entry(self.frame_first)
+        self.email_entry.place(relx=0.6, rely=0.25, relwidth=0.37)
+
+        self.motivo_entry = Text(self.frame_first)
+        self.motivo_entry.place(relx=0.05, rely=0.45, relwidth=0.7, relheight=0.3)
+
 
 AppVoiceRecognition()
