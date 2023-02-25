@@ -23,20 +23,21 @@ class VoiceRecognition:
             # Treating noise
             self.rec.adjust_for_ambient_noise(microphone)
             # Speech Max Pause
-            self.rec.pause_threshold = 2
+            self.rec.pause_threshold = 1
             # Listening
             audio = self.rec.listen(microphone)
         return audio
 
     def writing_audio(self, audio):
         # Saving audio to a variable
-        texto = self.rec.recognize_google(audio, language="en-US")
+        text = self.rec.recognize_google(audio, language="en-US")
         # Print result
-        print('Resultado: ', texto)
+        print('Result: ', text)
 
-    def save_audio(self, texto):
-        with open('audio.wav', 'w') as arquivo:
-            arquivo.write(texto.get)
+    def save_audio(self, text):
+        # Writing an wav file in binaries
+        with open('audio.wav', 'wb') as file:
+            file.write(text.get_wav_data())
 
 
 VoiceRecognition()
