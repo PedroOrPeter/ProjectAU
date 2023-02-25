@@ -1,4 +1,2 @@
 # ProjectAU
-
-pip install SpeechRecognition
-python -m pip install pyaudio
+pip3 install -r requirements.txt
