@@ -6,7 +6,8 @@ class VoiceRecognition:
         self.microphone = sr.Microphone()
         self.rec = sr.Recognizer()
         self.show_devices()
-        audio = self.listening(self.select_devices())
+        device = self.select_devices()
+        audio = self.listening(device)
         self.writing_audio(audio)
         self.save_audio(audio)
 
@@ -35,7 +36,7 @@ class VoiceRecognition:
         print('Result: ', text)
 
     def save_audio(self, text):
-        # Writing an wav file in binaries
+        # Writing a wav file in binaries
         with open('audio.wav', 'wb') as file:
             file.write(text.get_wav_data())
 
