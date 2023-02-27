@@ -5,8 +5,12 @@ class GetIpByDevice:
     def __init__(self):
         self.hostname = None
         self.ip_address = None
+        self.file = None
         self.get_hostname()
         self.get_ip_address()
+        self.open_txt()
+        self.write_txt()
+        self.close_txt()
 
     def get_hostname(self):
         self.hostname = socket.gethostname()
@@ -16,5 +20,15 @@ class GetIpByDevice:
         self.ip_address = socket.gethostbyname(self.hostname)
         return self.ip_address
 
-# print(f"Hostname: {hostname}")
-# print(f"IP Address: {ip_address}")
+    def open_txt(self):
+        self.file = open('IpContent.txt', 'w')
+        return self.file
+
+    def write_txt(self):
+        self.file.write('{}\n{}'.format(self.hostname, self.ip_address))
+
+    def close_txt(self):
+        self.file.close()
+
+
+GetIpByDevice()
