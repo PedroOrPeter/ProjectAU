@@ -7,12 +7,6 @@ class GetIpByDevice:
         self.hostname = None
         self.ip_address = None
         self.file = None
-        self.get_hostname()
-        self.get_ip_address()
-        self.open_txt()
-        self.write_txt()
-        self.close_txt()
-        self.hide_files()
 
     def get_hostname(self):
         self.hostname = socket.gethostname()

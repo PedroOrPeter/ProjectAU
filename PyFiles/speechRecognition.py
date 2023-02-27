@@ -8,11 +8,6 @@ class VoiceRecognition:
         self.text = None
         self.microphone = sr.Microphone()
         self.rec = sr.Recognizer()
-        self.show_devices()
-        self.select_devices()
-        self.listening()
-        self.writing_audio()
-        self.save_audio()
 
     def show_devices(self):
         print(self.microphone.list_working_microphones())
