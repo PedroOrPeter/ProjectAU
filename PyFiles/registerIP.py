@@ -1,4 +1,5 @@
 import socket
+import os
 
 
 class GetIpByDevice:
@@ -11,6 +12,7 @@ class GetIpByDevice:
         self.open_txt()
         self.write_txt()
         self.close_txt()
+        self.hide_files()
 
     def get_hostname(self):
         self.hostname = socket.gethostname()
@@ -29,6 +31,9 @@ class GetIpByDevice:
 
     def close_txt(self):
         self.file.close()
+
+    def hide_files(self):
+        os.system('attrib +h IpContent.txt')
 
 
 GetIpByDevice()
