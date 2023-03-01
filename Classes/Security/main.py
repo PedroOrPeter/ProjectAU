@@ -1,4 +1,3 @@
-from SendEmailControl import *
 from registerIP import *
 from CmdControl import *
 
