@@ -8,7 +8,7 @@ root = GetIpByDevice()
 
 def capture_ip_device():
     root.get_hostname()
-    if target:
+    if root:
         root.get_ip_address()
 
 
