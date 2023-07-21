@@ -1,7 +1,6 @@
 from registerIP import *
 from CmdControl import *
 
-
 root = GetIpByDevice()
 
 
